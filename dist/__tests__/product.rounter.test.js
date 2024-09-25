@@ -19,7 +19,7 @@ const product_route_1 = __importDefault(require("../routes/product.route"));
 jest.mock("../controller/product.controller", () => ({
     getAll: jest.fn((req, res) => res.status(200).send({
         message: "OK",
-        result: [{ id: 1, name: "Product 1" }],
+        result: [{ id: 351, name: "Paramet Sitthimool" }],
     })),
     deleteById: jest.fn((req, res) => {
         const id = parseInt(req.params.id, 10);
@@ -57,7 +57,7 @@ describe("Product Router", () => {
         expect(response.status).toBe(200);
         expect(response.body).toEqual({
             message: "OK",
-            result: [{ id: 1, name: "Product 1" }],
+            result: [{ id: 351, name: "Paramet Sitthimool" }],
         });
     }));
     it("should delete a product by ID", () => __awaiter(void 0, void 0, void 0, function* () {

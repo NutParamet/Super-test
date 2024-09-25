@@ -7,7 +7,7 @@ jest.mock("../controller/product.controller", () => ({
   getAll: jest.fn((req, res) =>
     res.status(200).send({
       message: "OK",
-      result: [{ id: 1, name: "Product 1" }],
+      result: [{ id: 351, name: "Paramet Sitthimool" }],
     })
   ),
   deleteById: jest.fn((req, res) => {
@@ -50,7 +50,7 @@ describe("Product Router", () => {
     expect(response.status).toBe(200);
     expect(response.body).toEqual({
       message: "OK",
-      result: [{ id: 1, name: "Product 1" }],
+      result: [{ id: 351, name: "Paramet Sitthimool" }],
     });
   });
 
